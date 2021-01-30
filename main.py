@@ -23,7 +23,7 @@ async def on_message(message):
   if message.author == client.user:
     return
 
-   print(message.content)
+  print(message.content)
 
   if message.content.startswith('ANGULAR'):
     await message.channel.send('REACT!!!!!!')

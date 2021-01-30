@@ -1,5 +1,10 @@
-import discord
 import os
+import discord
+
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv('TOKEN')
 
 client = discord.Client()
 
@@ -25,4 +30,4 @@ async def on_message(message):
     await message.channel.send('Angular!')
     
 
-client.run(os.getenv('TOKEN'))
+client.run('TOKEN')

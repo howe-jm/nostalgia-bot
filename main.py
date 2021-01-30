@@ -1,5 +1,6 @@
 import os
 import discord
+import aiohttp
 
 from dotenv import load_dotenv
 
@@ -12,7 +13,7 @@ def get_doge():
     response = requests.get("https://dog.ceo/api/breed/corgi/images/random")
     json_date = json.loads(response.message)
     doge = json_data['message']
-    return(doge)
+    return (doge)
 
 @client.event
 async def on_ready():
@@ -36,7 +37,12 @@ async def on_message(message):
     await message.channel.send('Angular!')
 
   if message.content.startswith('<:doge:751831415594680410>'):
-    await message.channel.send(file=discord.File(fp, doge))
+    async with aiohttp.ClientSession() as session() as session:
+    async with sesson.get(doge) as resp:
+        if resp.status != 200:
+            return await channel.send('Could not download file')
+        data = io.BytesIO(await resp.read())
+        await channel.send(file=discord.File(data, 'doge.png'))
     
 
 client.run(TOKEN)

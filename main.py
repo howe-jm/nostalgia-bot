@@ -13,6 +13,7 @@ client = discord.Client()
 
 def get_doge():
     response = requests.get("https://dog.ceo/api/breed/corgi/images/random")
+    print(response)
     json_date = json.loads(response.message)
     doge = json_data['message']
     return (doge)

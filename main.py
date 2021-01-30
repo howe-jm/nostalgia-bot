@@ -46,7 +46,7 @@ async def on_message(message):
             if resp.status != 200:
                 return await channel.send('Could not download file')
             data = io.BytesIO(await resp.read())
-            await channel.send(file=discord.File(data, 'doge.png'))
+            await message.channel.send(file=discord.File(data, 'doge.png'))
     
 
 client.run(TOKEN)

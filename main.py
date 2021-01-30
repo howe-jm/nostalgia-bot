@@ -1,6 +1,8 @@
 import os
 import discord
 import aiohttp
+import requests
+import json
 
 from dotenv import load_dotenv
 

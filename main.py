@@ -37,7 +37,7 @@ async def on_message(message):
     await message.channel.send('Angular!')
 
   if message.content.startswith('<:doge:751831415594680410>'):
-      doge = get_doge()
+    doge = get_doge()
     async with aiohttp.ClientSession() as session() as session:
     async with sesson.get(doge) as resp:
         if resp.status != 200:

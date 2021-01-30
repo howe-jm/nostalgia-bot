@@ -30,4 +30,4 @@ async def on_message(message):
     await message.channel.send('Angular!')
     
 
-client.run('TOKEN')
+client.run(TOKEN)

@@ -40,7 +40,7 @@ async def on_message(message):
     await message.channel.send('Angular!')
 
   if 'asm' in message.content.lower():
-    await message.channel.send('Are you trying to reach your ASM? You will find their email address somewhere around here. Otherwise, please reach out Metty, who is the ASM now, and we’ll be happy to support.')
+    await message.channel.send('Are you trying to reach your ASM? You will find their email address somewhere around here. Otherwise, please reach out to Metty, who is the ASM now, and we’ll be happy to support.')
 
   if message.content.startswith('<:doge:751831415594680410>'):
     doge = get_doge()

@@ -39,11 +39,11 @@ async def on_message(message):
   if message.content.startswith('<:doge:751831415594680410>'):
     doge = get_doge()
     async with aiohttp.ClientSession() as session:
-    async with sesson.get(doge) as resp:
-        if resp.status != 200:
-            return await channel.send('Could not download file')
-        data = io.BytesIO(await resp.read())
-        await channel.send(file=discord.File(data, 'doge.png'))
+        async with sesson.get(doge) as resp:
+            if resp.status != 200:
+                return await channel.send('Could not download file')
+            data = io.BytesIO(await resp.read())
+            await channel.send(file=discord.File(data, 'doge.png'))
     
 
 client.run(TOKEN)

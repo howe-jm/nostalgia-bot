@@ -39,7 +39,7 @@ async def on_message(message):
   elif message.content.lower().startswith('react'):
     await message.channel.send('Angular!')
 
-  if 'asm' in message.content.lower():
+  if 'asm' in message.content.lower().split():
     await message.channel.send('Are you trying to reach your ASM? You will find their email address somewhere around here. Otherwise, please reach out to Metty, who is the ASM now, and we’ll be happy to support.')
 
   if message.content.startswith('<:doge:751831415594680410>'):

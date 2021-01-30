@@ -35,7 +35,7 @@ async def on_message(message):
   elif message.content.lower().startswith('react'):
     await message.channel.send('Angular!')
 
-  if message.content.startswith(':doge:')
+  if message.content.startswith(':doge:'):
     await channel.send(file=discord.File(fp, doge))
     
 

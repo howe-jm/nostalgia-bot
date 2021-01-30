@@ -36,7 +36,7 @@ async def on_message(message):
     await message.channel.send('Angular!')
 
   if message.content.startswith('<:doge:751831415594680410>'):
-    await channel.send(file=discord.File(fp, doge))
+    await message.channel.send(file=discord.File(fp, doge))
     
 
 client.run(TOKEN)

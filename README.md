@@ -8,4 +8,4 @@ This is the bot for you!
 
 You don't need to deploy it because it's already deployed and running on its intended Discord server, so don't worry about the instructions for doing so!
 
-Also, this is is technically my first published python code and it uploads photos of corgis to Discord on demand. You're welcome.
+Also, this is is technically my first published python code and it uploads photos of shiba inus to Discord on demand. You're welcome.

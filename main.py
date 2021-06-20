@@ -29,6 +29,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+    
+    if message.content.startswith("cat"):
+        await message.channel.send("Puppies")
 
     if message.content.startswith("ANGULAR"):
         await message.channel.send("REACT!!!!!!")

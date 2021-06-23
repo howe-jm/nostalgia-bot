@@ -49,6 +49,11 @@ async def on_message(message):
         await message.channel.send(
             "Are you trying to reach your ASM? You will find their email address somewhere around here. Otherwise, please reach out to Metty, who is the ASM now, and we’ll be happy to support."
         )
+        
+    if "im such a failure and idk what to do with my life" in message.content.lower().split():
+        await message.channel.send(
+            "NO, you are fucking AMAZING, you are litteraly made out of iron from heart of a dying star, out of 7+ billion people you are alive, healthy and have the world of options open to you, and lastly did I mention that you FUCKING ROCK. NOW TO UNFUCK YOURSELF AND SMILE GOOD DAMMIT."
+        )
 
     if message.content.startswith("<:doge:751831415594680410>"):
         doge = get_doge()
